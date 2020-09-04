@@ -107,7 +107,7 @@ function args(...as) {
       if (!as[1]) return;
       const name = as[1];
       let rule;
-      if (as[2] === "=" && as[3]) {
+      if (["--starts-with", "="].includes(as[2]) && as[3]) {
         const startsWith = as[3];
         const run = as.slice(4);
         rule = this.add(name, { startsWith, run });
@@ -123,7 +123,7 @@ function args(...as) {
       let rules;
       if (as[2] === "--all") {
         rules = removeAll(name);
-      } else if (as[2] === "=" && as[3]) {
+      } else if (["--starts-with", "="].includes(as[2]) && as[3]) {
         const startsWith = as[3];
         const rule = this.remove(name, { startsWith });
         rules = [rule];

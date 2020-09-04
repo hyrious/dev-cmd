@@ -1,6 +1,6 @@
 {
   "name": "@hyrious/dev-cmd",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "a shell helper",
   "main": "index.js",
   "scripts": {

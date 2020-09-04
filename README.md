@@ -3,6 +3,7 @@
 `dev` is a command-line tool that modifies commands before run.
 
 ```shell
+npm i -g @hyrious/dev-cmd
 dev --add proxy ... -c http.proxy=socks5://localhost:1080
 # proxy = ... -c http.proxy=socks5://localhost:1080
 dev proxy git clone XXX
@@ -25,6 +26,8 @@ dev -A hello echo "hello world!"
 dev hello
 => hello world!
 ```
+
+**! Note**: Windows users will encounter errors bacause `echo` is not a program but a shell command.
 
 #### `--starts-with {prefix}` / `=`
 
