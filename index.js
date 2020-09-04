@@ -140,7 +140,12 @@ function args(...as) {
       if (!as[1]) return;
       const file = as[1];
       this.plugins.push(file);
-      as = as.slice(2);
+      if (as[2] === '--save') {
+        conf.plugin(file);
+        as = as.slice(3);
+      } else {
+        as = as.slice(2);
+      }
     }
     if (as.length > 0) {
       for (const file of this.plugins) {

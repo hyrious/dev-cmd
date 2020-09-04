@@ -1,10 +1,11 @@
 {
   "name": "@hyrious/dev-cmd",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "a shell helper",
   "main": "index.js",
   "scripts": {
-    "test": "node test/all.js"
+    "test": "node test/all.js",
+    "release": "release-it"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,13 @@
   "bugs": {
     "url": "https://github.com/hyrious/dev-cmd/issues"
   },
-  "homepage": "https://github.com/hyrious/dev-cmd#readme"
+  "homepage": "https://github.com/hyrious/dev-cmd#readme",
+  "release-it": {
+    "github": {
+      "release": true
+    }
+  },
+  "devDependencies": {
+    "release-it": "^14.0.1"
+  }
 }
